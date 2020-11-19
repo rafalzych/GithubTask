@@ -6,7 +6,7 @@ android {
     compileSdkVersion 29
 
     defaultConfig {
-        applicationId "com.rafalzych.stp.task"
+        applicationId "com.rafalzych.github.task"
         versionCode 1
         versionName "1.0"
 
