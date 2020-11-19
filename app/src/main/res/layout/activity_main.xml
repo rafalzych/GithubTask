@@ -15,6 +15,7 @@
         style="?android:attr/progressBarStyleLarge"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="@dimen/progress_bar_margin" />
+        android:layout_margin="@dimen/progress_bar_margin"
+        android:visibility="gone" />
 
 </FrameLayout>
