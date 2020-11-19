@@ -2,7 +2,7 @@ package com.rafalzych.github.task.data
 
 import com.rafalzych.github.task.data.repository.GithubCache
 import com.rafalzych.github.task.data.repository.GithubRemote
-import com.rafalzych.github.task.model.Repository
+import com.rafalzych.github.task.model.Repo
 import com.rafalzych.github.task.model.User
 import io.reactivex.Single
 
@@ -15,7 +15,7 @@ class GithubDataRepository(
         return githubRemote.getGithubUsers()
     }
 
-    override fun getUsersRepositories(userName: String): Single<List<Repository>> {
+    override fun getUsersRepositories(userName: String): Single<List<Repo>> {
         return githubRemote.getUsersRepositories(userName)
     }
 }

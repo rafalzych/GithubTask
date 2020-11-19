@@ -1,6 +1,6 @@
 package com.rafalzych.github.task.data.network
 
-import com.rafalzych.github.task.model.Repository
+import com.rafalzych.github.task.model.Repo
 import com.rafalzych.github.task.model.User
 import io.reactivex.Single
 import retrofit2.http.GET
@@ -11,5 +11,5 @@ interface GithubNetworkService {
     fun getGithubUsers(): Single<List<User>>
 
     @GET(value = "users/{userName}/repos")
-    fun getUserRepositories(@Path("userName") userName: String): Single<List<Repository>>
+    fun getUserRepositories(@Path("userName") userName: String): Single<List<Repo>>
 }
