@@ -6,6 +6,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical">
 
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/svGithubUsersSearch"
+        style="@style/Widget.AppCompat.Light.SearchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/base_dimen_8"
+        android:visibility="gone"
+        app:iconifiedByDefault="false"
+        app:queryHint="Search here"
+        tools:visibility="visible" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvGithubUsers"
         android:layout_width="match_parent"

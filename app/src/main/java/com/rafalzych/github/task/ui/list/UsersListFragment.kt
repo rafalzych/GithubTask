@@ -1,6 +1,7 @@
 package com.rafalzych.github.task.ui.list
 
 import android.os.Bundle
+import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.rafalzych.github.task.R
 import com.rafalzych.github.task.model.GithubUser
@@ -32,6 +33,18 @@ class UsersListFragment : BaseFragment<UsersListContract.Presenter>(), UsersList
 
     override fun initView() {
         configureRecyclerView()
+
+        svGithubUsersSearch.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                githubUsersAdapter.filter(query ?: "")
+                return true
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                githubUsersAdapter.filter(newText ?: "")
+                return true
+            }
+        })
     }
 
     private fun configureRecyclerView() {
@@ -44,6 +57,7 @@ class UsersListFragment : BaseFragment<UsersListContract.Presenter>(), UsersList
 
     override fun setDataOnView(result: List<GithubUser>) {
         githubUsersAdapter.setItems(result)
+        svGithubUsersSearch.show()
     }
 
     override fun displayErrorMessage(message: String?) {
