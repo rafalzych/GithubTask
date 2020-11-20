@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 29
@@ -43,7 +44,7 @@ dependencies {
     implementation Dependencies.rxandroid
     implementation Dependencies.gson
     implementation Dependencies.glide
-    implementation Dependencies.glideCompiler
+    kapt Dependencies.glideCompiler
     implementation Dependencies.timber
 
     testImplementation Dependencies.testJunit

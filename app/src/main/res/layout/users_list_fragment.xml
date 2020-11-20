@@ -2,13 +2,38 @@
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical">
 
     <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvGithubUsersTitle"
+        style="@style/TextAppearance.AppCompat.Headline"
+        android:padding="@dimen/base_dimen_8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/github_users_title" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvGithubUsers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:overScrollMode="never"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:itemCount="30"
+        tools:listitem="@layout/github_user_item" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvGithubUsersError"
         style="@style/TextAppearance.AppCompat.Headline"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="List Fragment" />
+        android:padding="@dimen/base_dimen_8"
+        android:text="@string/github_users_title"
+        android:textColor="@color/errorColor"
+        android:visibility="gone" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>

@@ -5,5 +5,6 @@
     <dimen name="base_dimen_16">16dp</dimen>
     <dimen name="base_dimen_32">32dp</dimen>
 
+    <dimen name="avatar_image_view_size">72dp</dimen>
     <dimen name="progress_bar_margin">150dp</dimen>
 </resources>

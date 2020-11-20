@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Github Task</string>
+
+    <string name="github_user_name_label">User name:</string>
+    <string name="github_user_repos_label">User repos:</string>
+    <string name="github_users_title">List of 30 github users</string>
 </resources>
