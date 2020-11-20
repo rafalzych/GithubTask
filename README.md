@@ -12,3 +12,4 @@ If there will be a more time space:
 - Add Unit tests
 - Add mappers between data, domain, view layers
 - Make UI a bit more polished
+- Add better handling for error messages/dialogs
