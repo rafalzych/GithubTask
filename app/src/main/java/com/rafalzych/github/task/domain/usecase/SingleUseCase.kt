@@ -10,7 +10,7 @@ abstract class SingleUseCase<T, in Params> {
     abstract fun createSingleUseCase(params: Params? = null): Single<T>
 
     fun execute(subscriber: Subscriber<T>, params: Params? = null): Disposable {
-        return this.createSingleUseCase()
+        return this.createSingleUseCase(params)
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .doOnSubscribe { subscriber.doOnSubscribe() }

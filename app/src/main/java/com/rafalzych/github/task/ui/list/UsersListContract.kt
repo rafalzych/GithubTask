@@ -9,7 +9,6 @@ interface UsersListContract {
         fun initView()
         fun setDataOnView(result: List<GithubUser>)
         fun displayErrorMessage(message: String?)
-
     }
 
     interface Presenter : BaseContract.Presenter

@@ -6,15 +6,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvGithubUsersTitle"
-        style="@style/TextAppearance.AppCompat.Headline"
-        android:padding="@dimen/base_dimen_8"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/github_users_title" />
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvGithubUsers"
         android:layout_width="match_parent"
@@ -31,7 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:padding="@dimen/base_dimen_8"
+        android:padding="@dimen/base_dimen_16"
         android:text="@string/github_users_title"
         android:textColor="@color/errorColor"
         android:visibility="gone" />
