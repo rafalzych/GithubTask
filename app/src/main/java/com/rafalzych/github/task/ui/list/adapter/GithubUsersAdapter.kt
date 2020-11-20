@@ -61,8 +61,11 @@ class GithubUsersAdapter : RecyclerView.Adapter<GithubUsersAdapter.GithubUsersVi
             with(itemView) {
                 ivUserAvatar.loadImage(user.userAvatarUrl ?: "")
                 tvUserNameValue.text = user.userName
-                tvUserReposValue.text =
-                    user.userRepositories?.joinToString(separator = System.lineSeparator()) { "${it.name}" }
+                tvUserReposValue.text = if (user.userRepositories?.isNullOrEmpty() == true) {
+                    "This user has no repos"
+                } else {
+                    user.userRepositories.joinToString(separator = System.lineSeparator()) { "${it.name}" }
+                }
             }
         }
     }
