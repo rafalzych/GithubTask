@@ -18,10 +18,10 @@ class GetUsersDataUseCase(
 
     override fun createSingleUseCase(params: Void?): Single<List<GithubUser>> {
         return githubRepository.getGithubUsers().toObservable()
-            .flatMapIterable { it.take(2) }
+            .flatMapIterable { it }
             .flatMap { user ->
                 githubRepository.getUsersRepositories(user.login ?: "").map { repos ->
-                    GithubUser(user.login, user.avatarUrl, repos.take(1))
+                    GithubUser(user.login, user.avatarUrl, repos.take(3))
                 }.toObservable()
             }.toList()
     }
