@@ -6,7 +6,7 @@
 - Application is based on simple MVP architecture with clean packaging is using Retrofit and OkHttp for network, RxJava2 for async calls and data flow, Shared Preferences for cache, Glide for image processing
 
 ## Comments
-- If there will be a more time space:
+If there will be a more time space:
 - Add separate module for data/domain/model packages, make it more transparent
 - Add mappers between data, domain, view layers
 - Add proper Dependency Injection with Dagger2
