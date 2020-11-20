@@ -4,7 +4,7 @@ import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.rafalzych.github.task.model.CacheUsersList
 
-class GithubUsersListAdapter(private val gson: Gson = GsonBuilder().create()) {
+class GithubUsersListSerializer(private val gson: Gson = GsonBuilder().create()) {
     fun serializeGithubUsersList(githubUsersList: CacheUsersList): String {
         return gson.toJson(githubUsersList)
     }

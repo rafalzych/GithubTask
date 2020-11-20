@@ -41,7 +41,9 @@ class GithubUsersAdapter : RecyclerView.Adapter<GithubUsersAdapter.GithubUsersVi
         } else {
             for (user: GithubUser in itemsAll) {
                 if (user.userName?.toLowerCase()
-                        ?.contains(text) == true || user.userRepositories?.any { it.name == text } == true
+                        ?.contains(text) == true || user.userRepositories?.any {
+                        it.name?.toLowerCase()?.contains(text) == true
+                    } == true
                 ) {
                     items.add(user)
                 }

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/vgGithubUserItemRoot"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
@@ -21,10 +22,11 @@
         android:layout_height="wrap_content"
         android:paddingStart="@dimen/base_dimen_8"
         android:paddingEnd="@dimen/base_dimen_8"
+        android:layout_marginTop="@dimen/base_dimen_8"
         android:text="@string/github_user_name_label"
         app:layout_constraintEnd_toStartOf="@id/tvUserNameValue"
         app:layout_constraintStart_toEndOf="@+id/ivUserAvatar"
-        app:layout_constraintTop_toTopOf="@+id/ivUserAvatar"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed" />
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -32,13 +34,12 @@
         style="@style/TextAppearance.AppCompat.Body1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/base_dimen_8"
         android:paddingStart="@dimen/base_dimen_8"
         android:paddingEnd="@dimen/base_dimen_8"
         android:text="@string/github_user_repos_label"
-        app:layout_constraintBottom_toBottomOf="@+id/ivUserAvatar"
-        app:layout_constraintEnd_toStartOf="@id/tvUserReposValue"
+        app:layout_constraintBottom_toTopOf="@+id/tvUserReposValue"
         app:layout_constraintStart_toEndOf="@+id/ivUserAvatar"
+        app:layout_constraintTop_toBottomOf="@+id/tvUserNameLabel"
         app:layout_constraintVertical_chainStyle="packed" />
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -58,12 +59,15 @@
         style="@style/TextAppearance.AppCompat.Body1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/base_dimen_8"
+        android:paddingStart="@dimen/base_dimen_8"
         android:layout_marginEnd="@dimen/base_dimen_8"
+        android:paddingEnd="@dimen/base_dimen_8"
         android:maxLines="3"
-        app:layout_constraintBottom_toBottomOf="@+id/tvUserReposLabel"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tvUserReposLabel"
-        app:layout_constraintTop_toTopOf="@+id/tvUserReposLabel"
-        app:layout_constraintVertical_chainStyle="packed" />
+        app:layout_constraintStart_toEndOf="@+id/ivUserAvatar"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="repo1 \nrepo2 \nrepo3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
